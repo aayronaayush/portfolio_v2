@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss"
+import Title from "../components/Title"
 
 const useStyles = createUseStyles({
   container: {
@@ -15,6 +16,7 @@ export default function Home() {
 
   return (
     <div className={classes.container}>
+      <Title />
       <h1>Aayush Aayron Deo</h1>
       <h3>
         Portfolio Website Coming Soon 
