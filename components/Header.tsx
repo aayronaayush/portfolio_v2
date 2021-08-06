@@ -194,7 +194,7 @@ export default function Header() {
             {
                 navItems.map((navItem, index) => {
                     return <Link key={index} href={navItem.path} passHref>
-                        <div className={arrowDirection == -1 ? classes.navMobileContainerOpen : classes.navMobileContainerClosed}>{navItem.text}</div>
+                        <div onClick={() => setArrowDirection(1)} className={arrowDirection == -1 ? classes.navMobileContainerOpen : classes.navMobileContainerClosed}>{navItem.text}</div>
                     </Link>
                 })
             }
