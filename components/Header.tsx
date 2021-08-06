@@ -91,7 +91,9 @@ const useStyles = createUseStyles({
     "@keyframes close": {
         "0%": {
             color: "black",
-            height: mobileNavContainerHeight
+            height: mobileNavContainerHeight,
+            padding: 5,
+            paddingLeft: 10
         },
         "50%": {
             color: "transparent",
@@ -99,7 +101,8 @@ const useStyles = createUseStyles({
         },
         "100%": {
             color: "transparent",
-            height: 0
+            height: 0,
+            padding: 0
         }
     },
     horizontalRule: {
