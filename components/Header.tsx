@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { createUseStyles } from "react-jss"
 import Image from "next/image"
 import Link from "next/link"
+
+import youtubeIcon from "../public/youtube.png"
 import arrow from "../public/arrow.png"
 
 const mobileNavContainerHeight = "30px"
@@ -28,7 +30,9 @@ const useStyles = createUseStyles({
         paddingLeft: 15 
     },
     navContainer: {
-            display: "inline"
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
     },
     navMobileButton: {
         display: "none"
@@ -154,6 +158,14 @@ const navItems = [
     }
 ]
 
+const socials = [
+    {
+        icon: youtubeIcon,
+        link: "https://www.youtube.com/channel/UCx4493cWyLnWBNCz7pjeKNA",
+        alt: "Youtube Logo"
+    }
+]
+
 export default function Header() {
     const classes = useStyles()
 
@@ -181,12 +193,19 @@ export default function Header() {
             <Image className={arrowOrientation} width={25} height={15} src={arrow} alt="Orientation Arrow" />
         </span>
         
-
         <span className={classes.navContainer}>
             {
                 navItems.map((navItem, index) => {
                     return <Link key={index} href={navItem.path} passHref>
                         <span className={classes.navItem}>{navItem.text}</span>
+                    </Link>
+                })
+            }
+            &nbsp;&nbsp;
+            {
+                socials.map((social, index) => {
+                    return <Link key={index} href={social.link} passHref>
+                        <Image width={35} height={25} src={social.icon} alt={social.alt}/>
                     </Link>
                 })
             }
@@ -198,6 +217,17 @@ export default function Header() {
                 navItems.map((navItem, index) => {
                     return <Link key={index} href={navItem.path} passHref>
                         <div onClick={() => setArrowDirection(1)} className={arrowDirection == -1 ? classes.navMobileContainerOpen : classes.navMobileContainerClosed}>{navItem.text}</div>
+                    </Link>
+                })
+            }
+            {
+                socials.map((social, index) => {
+                    return <Link key={index} href={social.link} passHref>
+                        <div onClick={() => setArrowDirection(1)} className={arrowDirection == -1 ? classes.navMobileContainerOpen : classes.navMobileContainerClosed}>
+                            {
+                                arrowDirection == -1 ? <Image src={social.icon} width={35} height={25} alt={social.alt} /> : <></>
+                            }
+                        </div>
                     </Link>
                 })
             }
