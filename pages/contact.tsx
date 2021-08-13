@@ -8,7 +8,6 @@ const useStyles = createUseStyles({
         alignItems: "center"
     },
     content: {
-        transform: "translateY(-20%)",
         textAlign: "center"
     }, 
     headshot: {
