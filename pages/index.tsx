@@ -7,6 +7,9 @@ import HorizontalRule from "../components/HR";
 import { WorkExperience as WorkExperienceData } from "../data/workExperience";
 import Project  from "../components/Project";
 import { projects } from "../data/projects";
+import { skills } from "../data/skills";
+
+const displaySkills = [skills.reactjs, skills.nodejs, skills.typescript, skills.javascript, skills.mongodb]
 
 const useStyles = createUseStyles({
   text: {
@@ -29,6 +32,18 @@ const useStyles = createUseStyles({
   title: {
     textAlign: "center",
   },
+  skillLogo: {
+    height: "100px",
+    maxWidth: "50%",
+    margin: 10,
+    padding: 30,
+    border: "1px solid gray"
+  },
+  skillContainer: {
+    display: "flex-wrap",
+    textAlign: "center",
+    margin: "auto"
+  }
 });
 
 export default function Home() {
@@ -66,6 +81,15 @@ export default function Home() {
           </div>
         })
       }
+      <h1 className={classes.title}>Skills</h1>
+      <HorizontalRule />
+      <div className={classes.skillContainer}>
+        {
+          displaySkills.map(skill => {
+            return <img key={skill.imageSrc} className={classes.skillLogo} src={skill.imageSrc} alt={`${skill.techName} image`} />
+          })
+        }
+      </div>
     </div>
   );
 }
