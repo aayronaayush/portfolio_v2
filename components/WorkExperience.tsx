@@ -19,7 +19,27 @@ const useStyles = createUseStyles({
         fontSize: "18pt",
         textDecoration: "none",
         color: "inherit"
+    },
+    "@media screen and (max-width: 549px)": {
+    // mobile
+    container: {
+        height: "0%",
+        flexDirection: "column"
+    },
+    content: {
+        width: "100%",
+        justifyContent: "center"
+    },
+    role: {
+        display: "flex",
+        flexDirection:"column",
+        textAlign: "center",
+        padding: "0"
+    },
+    institution: {
+        fontSize: "14pt"
     }
+  },
 })
 
 export default function WorkExperience({experience}: {experience: Experience}) {

@@ -26,7 +26,7 @@ const useStyles = createUseStyles({
   },
   title: {
     textAlign: "center",
-  }
+  },
 });
 
 export default function Home() {

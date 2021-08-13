@@ -21,7 +21,7 @@ export const WorkExperience: Array<Experience> = [
         ]
     },
     {
-        institution: "New York University Abu Dhabi Undergraduate AdmissionOffice",
+        institution: "New York University Abu Dhabi Undergraduate Admission Office",
         link: "#",
         duration: "August 2019 - Present",
         title: "Senior Student Admissions Ambassador",
