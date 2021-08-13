@@ -39,7 +39,7 @@ export default function SummaryBlock() {
     return <div className={classes.container}>
         <div className={classes.text}>
             <p className={classes.name}>I am Aayush!</p>
-            <p className={classes.summary}>I am full stack web and mobile app developer</p>
+            <p className={classes.summary}>I am a full stack web and mobile app developer</p>
         </div>
     </div>
 }
