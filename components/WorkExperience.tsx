@@ -3,7 +3,7 @@ import { Experience } from "../types"
 
 const useStyles = createUseStyles({
     container: {
-        height: 500,
+        height: 300,
         display: "flex"
     },
     content: {
