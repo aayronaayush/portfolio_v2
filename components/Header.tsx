@@ -144,17 +144,17 @@ const navItems = [
         text: "Projects",
         path: "#"
     },
-    {
-        text: "Work Experience",
-        path: "#"
-    },
-    {
-        text: "Skills",
-        path: "#"
-    },
+    // {
+    //     text: "Work Experience",
+    //     path: "#"
+    // },
+    // {
+    //     text: "Skills",
+    //     path: "#"
+    // },
     {
         text: "Contact",
-        path: "#"
+        path: "/contact"
     }
 ]
 
