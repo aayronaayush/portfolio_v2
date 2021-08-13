@@ -3,7 +3,6 @@ import { createUseStyles } from "react-jss"
 const useStyles = createUseStyles({
     container: {
         height: "90vh",
-        border: "3px solid red",
         display: "flex",
         justifyContent: "center",
         alignItems: "center"
@@ -14,7 +13,7 @@ const useStyles = createUseStyles({
     }, 
     headshot: {
         width: 400,
-        maxWidth: "90%"
+        maxWidth: "90%",
     },
     a: {
         textDecoration: "none",
