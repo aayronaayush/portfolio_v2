@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import youtubeIcon from "../public/youtube.png";
 import arrow from "../public/arrow.png";
+import HorizontalRule from "./HR";
 
 const mobileNavContainerHeight = "30px";
 
@@ -150,10 +151,10 @@ const navItems = [
     text: "CV",
     path: "cv.pdf",
   },
-  {
-    text: "Projects",
-    path: "#",
-  },
+  // {
+  //   text: "Projects",
+  //   path: "#",
+  // },
   // {
   //     text: "Work Experience",
   //     path: "#"
@@ -243,7 +244,7 @@ export default function Header() {
           })}
         </span>
       </div>
-      <hr className={classes.horizontalRule} />
+      <HorizontalRule />
       <div>
         {navItems.map((navItem, index) => {
           return navItem.text == "CV" ? (

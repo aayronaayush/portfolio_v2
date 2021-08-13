@@ -1,8 +1,10 @@
 import { createUseStyles } from "react-jss";
 
 import Title from "../components/Title";
-import Header from "../components/Header";
 import SummaryBlock from "../components/SummaryBlock";
+import WorkExperience from "../components/WorkExperience";
+import HorizontalRule from "../components/HR";
+import { WorkExperience as WorkExperienceData } from "../data/workExperience";
 
 const useStyles = createUseStyles({
   text: {
@@ -22,6 +24,9 @@ const useStyles = createUseStyles({
     fontSize: "18pt",
     textShadow: "2px 2px 2px grey",
   },
+  title: {
+    textAlign: "center",
+  }
 });
 
 export default function Home() {
@@ -38,6 +43,16 @@ export default function Home() {
     <div>
       <Title />
       <SummaryBlock content={summaryBlockContent} />
+      <h1 className={classes.title}>Work Experience</h1>
+      <HorizontalRule />
+      {
+        WorkExperienceData.map((experience) => {
+          return <div key={experience.institution}>
+          <WorkExperience experience={experience}/>
+          <HorizontalRule />
+          </div>
+        })
+      }
     </div>
   );
 }
