@@ -20,7 +20,7 @@ const useStyles = createUseStyles({
         textDecoration: "none",
         color: "inherit"
     },
-    "@media screen and (max-width: 549px)": {
+    "@media screen and (max-width: 650px)": {
     // mobile
     container: {
         height: "0%",
@@ -37,7 +37,7 @@ const useStyles = createUseStyles({
         padding: "0"
     },
     institution: {
-        fontSize: "14pt"
+        fontSize: ""
     }
   },
 })
