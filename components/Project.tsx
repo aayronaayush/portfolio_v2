@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss"
-import { Experience } from "../types"
+import { Experience, Project } from "../types"
 
 const useStyles = createUseStyles({
     container: {
@@ -12,10 +12,10 @@ const useStyles = createUseStyles({
         height: "100%",
         alignItems: "center",
     },
-    role: {
+    project: {
         paddingLeft: 50
     },
-    institution: {
+    title: {
         fontSize: "18pt",
         textDecoration: "none",
         color: "inherit"
@@ -30,40 +30,36 @@ const useStyles = createUseStyles({
         width: "100%",
         justifyContent: "center"
     },
-    role: {
+    project: {
         display: "flex",
         flexDirection:"column",
         textAlign: "center",
         padding: "0"
     },
-    institution: {
+    title: {
         fontSize: "14pt"
     }
   },
 })
 
-export default function WorkExperience({experience}: {experience: Experience}) {
+export default function ProjectBlock({project}: {project: Project}) {
     const classes = useStyles()
 
 
     return <div className={classes.container}>
         <div className={classes.content}>
-            <div className={classes.role}>
-                <a href={experience.link} className={classes.institution}>
-                        {experience.institution}
+            <div className={classes.project}>
+                <a href={project.link} className={classes.title}>
+                        {project.title}
                 </a>
-                <i>
-                    <p>{experience.title}</p>
-                    <p>{experience.duration}</p>
-                </i>
             </div>
         </div>
         <div className={classes.content}>
             <ul>
                 {
-                    experience.responsibilities.map((responsibility ) => {
-                        return <li key={responsibility}>
-                            {responsibility}
+                    project.description.map(( description ) => {
+                        return <li key={description}>
+                            {description}
                         </li>
                     })
                 }

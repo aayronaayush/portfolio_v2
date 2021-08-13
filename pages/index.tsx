@@ -5,6 +5,8 @@ import SummaryBlock from "../components/SummaryBlock";
 import WorkExperience from "../components/WorkExperience";
 import HorizontalRule from "../components/HR";
 import { WorkExperience as WorkExperienceData } from "../data/workExperience";
+import Project  from "../components/Project";
+import { projects } from "../data/projects";
 
 const useStyles = createUseStyles({
   text: {
@@ -50,6 +52,17 @@ export default function Home() {
           return <div key={experience.institution}>
           <WorkExperience experience={experience}/>
           <HorizontalRule />
+          </div>
+        })
+      }
+
+      <h1 className={classes.title}>Projects</h1>
+      <HorizontalRule />
+      {
+        projects.map(project => {
+          return <div key={project.title}>
+            <Project project={project} />
+            <HorizontalRule />
           </div>
         })
       }

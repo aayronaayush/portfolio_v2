@@ -2,6 +2,18 @@ import { Experience } from "../types";
 
 export const WorkExperience: Array<Experience> = [
     {
+        institution: "New York University Abu Dhabi Undergraduate Admission Office",
+        link: "#",
+        duration: "August 2019 - Present",
+        title: "Senior Student Admissions Ambassador",
+        responsibilities: [
+            "Implemented an automated system for admissions staffto request for student ambassadors to support eventsvia Google forms,Google Sheets and GScript",
+            "Developed an independent event management system usingReactJS/NextJS, using Firebase as the backend foruse by 20student ambassadors, 20 staff members to facilitateabout 50 event requests per academic year",
+            "Implemented a notification system for the event managementsystem using Sendgrid Email API",
+            "Implemented event scheduling on Google Calendar usingGoogle Calendar API"
+        ]
+    },
+    {
         institution: "Aomni",
         link: "https://app.aomni.com",
         duration: "October 2020 - February 2021",
@@ -21,15 +33,15 @@ export const WorkExperience: Array<Experience> = [
         ]
     },
     {
-        institution: "New York University Abu Dhabi Undergraduate Admission Office",
-        link: "#",
-        duration: "August 2019 - Present",
-        title: "Senior Student Admissions Ambassador",
+        institution: "Scholars Abroad Fiji",
+        link: "https://scholarsabroadfiji.com",
+        duration: "July 2020 - Present",
+        title: "Co-founder and Web Developer",
         responsibilities: [
-            "Implemented an automated system for admissions staffto request for student ambassadors to support eventsvia Google forms,Google Sheets and GScript",
-            "Developed an independent event management system usingReactJS/NextJS, using Firebase as the backend foruse by 20student ambassadors, 20 staff members to facilitateabout 50 event requests per academic year",
-            "Implemented a notification system for the event managementsystem using Sendgrid Email API",
-            "Implemented event scheduling on Google Calendar usingGoogle Calendar API"
+            "Co-founded Scholars Abroad Fiji a mentorship network that assists current Fijian high school studentsto apply to internationaluniversities that offer full scholarship",
+            "Developed a public website using ExpressJS, MongoDB and NodeJS",
+            "Implemented contact page by using Nodemailer to sendan email to mentorship team",
+            "Hosted app on Google App Engine"
         ]
-    }
+    },
 ]
