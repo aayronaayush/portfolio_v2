@@ -29,6 +29,10 @@ const useStyles = createUseStyles({
     navItem: {
         paddingLeft: 15 
     },
+    a: {
+        textDecoration: "none",
+        color: "inherit"
+    },
     navContainer: {
             display: "flex",
             justifyContent: "center",
@@ -141,6 +145,10 @@ const useStyles = createUseStyles({
 
 const navItems = [
     {
+        text: "CV",
+        path: "cv.pdf"
+    },
+    {
         text: "Projects",
         path: "#"
     },
@@ -172,7 +180,6 @@ export default function Header() {
     const [arrowDirection, setArrowDirection] = useState(1)
     const [arrowOrientation, setArrowOrientation] = useState(classes.down)
 
-
     useEffect(() => {
         if (arrowDirection == 1) {
             setArrowOrientation(classes.down)
@@ -196,7 +203,9 @@ export default function Header() {
         <span className={classes.navContainer}>
             {
                 navItems.map((navItem, index) => {
-                    return <Link key={index} href={navItem.path} passHref>
+                    return navItem.text == "CV" ? <a className={classes.a} key={index} href={navItem.path} rel="noreferrer" target="_blank">
+                        <span className={classes.navItem}>{navItem.text}</span>
+                    </a> : <Link key={index} href={navItem.path} passHref>
                         <span className={classes.navItem}>{navItem.text}</span>
                     </Link>
                 })
@@ -215,7 +224,9 @@ export default function Header() {
         <div>
             {
                 navItems.map((navItem, index) => {
-                    return <Link key={index} href={navItem.path} passHref>
+                    return navItem.text == "CV" ? <a className={classes.a} href={navItem.path} rel="noreferrer" target="_blank">
+                        <div onClick={() => setArrowDirection(1)} className={arrowDirection == -1 ? classes.navMobileContainerOpen : classes.navMobileContainerClosed}>{navItem.text}</div> 
+                    </a> : <Link key={index} href={navItem.path} passHref>
                         <div onClick={() => setArrowDirection(1)} className={arrowDirection == -1 ? classes.navMobileContainerOpen : classes.navMobileContainerClosed}>{navItem.text}</div>
                     </Link>
                 })
@@ -232,5 +243,6 @@ export default function Header() {
                 })
             }
         </div>
+
     </div>
 }
