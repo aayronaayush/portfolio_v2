@@ -37,7 +37,7 @@ const useStyles = createUseStyles({
         padding: "0"
     },
     institution: {
-        fontSize: ""
+        fontSize: "14pt"
     }
   },
 })
