@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import youtubeIcon from "../public/youtube.png";
 import linkedInIcon from "../public/linkedin.png";
+import mailIcon from "../public/email.png"
 import arrow from "../public/arrow.png";
-import HorizontalRule from "./HR";
 
 const mobileNavContainerHeight = "30px";
 
@@ -182,6 +182,13 @@ const socials = [
     icon: linkedInIcon,
     link: "https://www.linkedin.com/in/aayush-deo/",
     alt: "LinkedIn Logo",
+    width: 25,
+    height: 25
+  },
+  {
+    icon: mailIcon,
+    link: "mailto:aad598@nyu.edu",
+    alt: "Email Logo",
     width: 25,
     height: 25
   },
