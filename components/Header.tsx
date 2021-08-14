@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import youtubeIcon from "../public/youtube.png";
+import linkedInIcon from "../public/linkedin.png";
 import arrow from "../public/arrow.png";
 import HorizontalRule from "./HR";
 
@@ -174,6 +175,15 @@ const socials = [
     icon: youtubeIcon,
     link: "https://www.youtube.com/channel/UCx4493cWyLnWBNCz7pjeKNA",
     alt: "Youtube Logo",
+    width: 35,
+    height: 25
+  },
+  {
+    icon: linkedInIcon,
+    link: "https://www.linkedin.com/in/aayush-deo/",
+    alt: "LinkedIn Logo",
+    width: 25,
+    height: 25
   },
 ];
 
@@ -232,19 +242,22 @@ export default function Header() {
           &nbsp;&nbsp;
           {socials.map((social, index) => {
             return (
-              <Link key={index} href={social.link} passHref>
-                <Image
-                  width={35}
-                  height={25}
-                  src={social.icon}
-                  alt={social.alt}
-                />
-              </Link>
+              <a key={index} className={classes.a} href={social.link} rel="noreferrer" target="_blank">
+                <span>
+                  <Image
+                    width={social.width}
+                    height={social.height}
+                    src={social.icon}
+                    alt={social.alt}
+                  />
+                  &nbsp;&nbsp;
+                </span>
+              </a>
             );
           })}
         </span>
       </div>
-      <HorizontalRule />
+      {/* <HorizontalRule /> */}
       <div>
         {navItems.map((navItem, index) => {
           return navItem.text == "CV" ? (
@@ -280,31 +293,34 @@ export default function Header() {
             </Link>
           );
         })}
+          <div
+            onClick={() => setArrowDirection(1)}
+            className={
+              arrowDirection == -1
+                ? classes.navMobileContainerOpen
+                : classes.navMobileContainerClosed
+            }
+          >
         {socials.map((social, index) => {
           return (
             <Link key={index} href={social.link} passHref>
-              <div
-                onClick={() => setArrowDirection(1)}
-                className={
-                  arrowDirection == -1
-                    ? classes.navMobileContainerOpen
-                    : classes.navMobileContainerClosed
-                }
-              >
+              <span>
                 {arrowDirection == -1 ? (
                   <Image
                     src={social.icon}
-                    width={35}
-                    height={25}
+                    width={social.width}
+                    height={social.height}
                     alt={social.alt}
                   />
                 ) : (
-                  <></>
+                  <></> 
                 )}
-              </div>
+                &nbsp;&nbsp;
+              </span>
             </Link>
           );
         })}
+        </div>
       </div>
     </div>
   );
