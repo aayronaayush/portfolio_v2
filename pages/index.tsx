@@ -19,13 +19,13 @@ const useStyles = createUseStyles({
   name: {
     margin: 0,
     fontWeight: "bold",
-    color: "#E2E8CE",
+    color: "#ffffff",
     fontSize: "24pt",
     textShadow: "2px 2px 2px grey",
   },
   summary: {
     margin: 0,
-    color: "#E2E8CE",
+    color: "#ffffff",
     fontSize: "18pt",
     textShadow: "2px 2px 2px grey",
   },
