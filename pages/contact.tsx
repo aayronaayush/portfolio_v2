@@ -1,5 +1,7 @@
 import { createUseStyles } from "react-jss";
 
+import Title from "../components/Title";
+
 const useStyles = createUseStyles({
   container: {
     height: "90vh",
@@ -24,6 +26,7 @@ export default function Contact() {
   const classes = useStyles();
   return (
     <div className={classes.container}>
+      <Title title="Contact" />
       <div className={classes.content}>
         <img className={classes.headshot} src="/headshot.png" alt="" />
         <h1>Get in touch!</h1>
