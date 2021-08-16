@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import youtubeIcon from "../public/youtube.png";
+import instagramIcon from "../public/instagram.png"
 import linkedInIcon from "../public/linkedin.png";
 import mailIcon from "../public/email.png"
 import arrow from "../public/arrow.png";
@@ -29,6 +30,13 @@ const useStyles = createUseStyles({
 });
 
 const socials = [
+  {
+    icon: instagramIcon,
+    link: "https://www.instagram.com/aayronaayu.sh/",
+    alt: "Instagram Logo",
+    width: 25,
+    height: 25
+  },
   {
     icon: youtubeIcon,
     link: "https://www.youtube.com/channel/UCx4493cWyLnWBNCz7pjeKNA",
