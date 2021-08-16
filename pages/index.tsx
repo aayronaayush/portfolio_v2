@@ -37,7 +37,6 @@ const useStyles = createUseStyles({
     maxWidth: "50%",
     margin: 10,
     padding: 30,
-    border: "1px solid gray"
   },
   skillContainer: {
     display: "flex-wrap",
