@@ -6,8 +6,10 @@ import WorkExperience from "../components/WorkExperience";
 import HorizontalRule from "../components/HR";
 import { WorkExperience as WorkExperienceData } from "../data/workExperience";
 import Project  from "../components/Project";
+import Testimony from "../components/Testimony";
 import { projects } from "../data/projects";
 import { skills } from "../data/skills";
+import { testimonials } from "../data/testimony";
 
 const displaySkills = [skills.reactjs, skills.nodejs, skills.typescript, skills.javascript, skills.mongodb]
 
@@ -59,6 +61,10 @@ export default function Home() {
     <div>
       <Title />
       <SummaryBlock content={summaryBlockContent} />
+      <h1 className={classes.title}>Testimony</h1>
+      <Testimony testimony={testimonials.rashad} /> 
+
+      <HorizontalRule />
       <h1 className={classes.title}>Work Experience</h1>
       <HorizontalRule />
       {
