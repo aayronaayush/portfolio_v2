@@ -11,3 +11,9 @@ export interface Project {
     link: string;
     description: Array<string>;
 }
+
+export interface Testimony {
+    name: string;
+    position: string;
+    statement: string;
+}

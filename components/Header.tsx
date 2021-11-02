@@ -328,7 +328,7 @@ export default function Header() {
                     alt={social.alt}
                   />
                 ) : (
-                  <></> 
+                  <div key={1}></div> 
                 )}
                 &nbsp;&nbsp;
               </span>
