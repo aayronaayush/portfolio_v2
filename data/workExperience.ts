@@ -1,10 +1,32 @@
 import { Experience } from "../types";
 
 export const WorkExperience: Array<Experience> = [
+	{
+        institution: "Mental VR",
+        link: "#",
+        duration: "August 2021 - Present",
+        title: "Full Stack Web Developer",
+        responsibilities: [
+            "Developed frontend for a training reporting dashboard from Figma Designs using ReactJS",
+            "Developed backend for the training report dashboard using Fastify in the MVC architecture",
+			"Automated a build in another repository using GitHub actions",
+			"Led a team of 3 to configure 45 HTC Vive Focus 3 devices and trained 45 individuals to use the device and the software"
+        ]
+    },
+	{
+        institution: "Soopa",
+        link: "#",
+        duration: "August 2021 - May 2022",
+        title: "Backend Developer",
+        responsibilities: [
+            "Implemented and facilitated the implementation of a payment gateway using the MasterCard Payment API",
+			"Developed the server side application using ExpressJS"
+        ]
+    },
     {
         institution: "New York University Abu Dhabi Undergraduate Admission Office",
         link: "#",
-        duration: "August 2019 - Present",
+        duration: "August 2019 - May 2022",
         title: "Senior Student Admissions Ambassador",
         responsibilities: [
             "Implemented an automated system for admissions staff to request for student ambassadors to support events via Google forms,Google Sheets and GScript",
@@ -26,7 +48,7 @@ export const WorkExperience: Array<Experience> = [
     {
         institution: "Alnakheel Magazine",
         link: "https://alnakheel.org",
-        duration: "October 2020 - Present",
+        duration: "October 2020 - May 2022",
         title: "Web Developer",
         responsibilities: [
             "Developed the public website and admin panel for theeditors of Alnakheel Magazine to add and edit articles using ReactJS/NextJS, Firebase and hosted on vercel"
