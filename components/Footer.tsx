@@ -30,20 +30,20 @@ const useStyles = createUseStyles({
 });
 
 const socials = [
-  {
-    icon: instagramIcon,
-    link: "https://www.instagram.com/aayronaayu.sh/",
-    alt: "Instagram Logo",
-    width: 25,
-    height: 25
-  },
-  {
-    icon: youtubeIcon,
-    link: "https://www.youtube.com/channel/UCx4493cWyLnWBNCz7pjeKNA",
-    alt: "Youtube Logo",
-    width: 35,
-    height: 25
-  },
+//   {
+//     icon: instagramIcon,
+//     link: "https://www.instagram.com/aayronaayu.sh/",
+//     alt: "Instagram Logo",
+//     width: 25,
+//     height: 25
+//   },
+//   {
+//     icon: youtubeIcon,
+//     link: "https://www.youtube.com/channel/UCx4493cWyLnWBNCz7pjeKNA",
+//     alt: "Youtube Logo",
+//     width: 35,
+//     height: 25
+//   },
   {
     icon: linkedInIcon,
     link: "https://www.linkedin.com/in/aayush-deo/",
@@ -53,7 +53,7 @@ const socials = [
   },
   {
     icon: mailIcon,
-    link: "mailto:aad598@nyu.edu",
+    link: "mailto:aayushaayron@gmail.com",
     alt: "Email Logo",
     width: 25,
     height: 25

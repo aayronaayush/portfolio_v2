@@ -11,7 +11,7 @@ import { projects } from "../data/projects";
 import { skills } from "../data/skills";
 import { testimonials } from "../data/testimony";
 
-const displaySkills = [skills.reactjs, skills.nodejs, skills.typescript, skills.javascript, skills.mongodb]
+const displaySkills = [skills.reactjs, skills.nodejs, skills.typescript, skills.mongodb]
 
 const useStyles = createUseStyles({
   text: {
