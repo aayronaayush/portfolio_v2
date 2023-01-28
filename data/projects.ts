@@ -13,7 +13,7 @@ export const projects: Array<Project> = [
         title: "Assassin Game Portal",
         link: "#",
         description: [
-            "Developed a dashboard for the annual Assassin Game at NYU Abu Dhabi using NextJS/ReactJS that was usedby 155 students over a period of 5 weeks, with 0% downtime on the system",
+            "Developed a dashboard for the annual Assassin Game at NYU Abu Dhabi using NextJS/ReactJS that was used by 155 students over a period of 5 weeks, with 0% downtime on the system",
             "Setup a daily CRON job to automate the elimination of players that did not meet a certain criteria and changing the phrase of the day"
         ]
     }
