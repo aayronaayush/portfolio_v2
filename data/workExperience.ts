@@ -2,9 +2,20 @@ import { Experience } from "../types";
 
 export const WorkExperience: Array<Experience> = [
 	{
+        institution: "Wio Bank PJSC",
+        link: "https://wio.io",
+        duration: "August 2022 - Present",
+        title: "Frontend Developer",
+        responsibilities: [
+            "Developed UI Kit components in flutter using designs from UI/UX designer",
+			"Liased with a backend engineers to implement a API contract in OpenAPI spec 3.0 as well as in GraphQl",
+			"Communicated with product owners, designers and backend engineers to efficiently deliver a fully automated salary transfer system for Wio's business banking customers"
+		]
+    },
+	{
         institution: "Mental VR",
         link: "#",
-        duration: "August 2021 - Present",
+        duration: "August 2021 - May 2022",
         title: "Full Stack Web Developer",
         responsibilities: [
             "Developed frontend for a training reporting dashboard from Figma Designs using ReactJS",
