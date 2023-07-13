@@ -1,8 +1,18 @@
 export const skills = {
+  openapi: {
+    techName: "OpenAPI",
+    imageSrc:
+      "/openapi.jpeg",
+  },
   nextjs: {
     techName: "NextJS",
     imageSrc:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1200px-Nextjs-logo.svg.png",
+  },
+  flutter: {
+    techName: "Flutter",
+    imageSrc:
+      "/flutter_logo.png",
   },
   reactjs: {
     techName: "ReactJS",

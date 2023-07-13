@@ -195,7 +195,7 @@ const socials = [
   },
   {
     icon: mailIcon,
-    link: "mailto:aayushaayron@gmail.com",
+    link: "mailto:aayush@wavessoftware.io",
     alt: "Email Logo",
     width: 25,
     height: 25
