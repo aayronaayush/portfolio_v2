@@ -3,7 +3,7 @@ import { Experience, Project } from "../types"
 
 const useStyles = createUseStyles({
     container: {
-        height: 300,
+        padding: 30,
         display: "flex"
     },
     content: {
