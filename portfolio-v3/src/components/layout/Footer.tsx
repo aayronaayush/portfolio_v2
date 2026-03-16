@@ -8,7 +8,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/aayushdeo",
+    href: "https://www.linkedin.com/in/aayush-deo/",
     icon: Linkedin,
   },
 ];
