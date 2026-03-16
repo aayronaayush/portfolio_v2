@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-bg: #F5FBEF;
+  --color-brand-surface: #E8F0E2;
+  --color-brand-accent: #17B890;
+  --color-brand-accent-light: #1DD9A8;
+  --color-brand-text: #000000;
+  --color-brand-white: #000000;
+
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-syne);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-white);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-brand-accent);
+  color: var(--color-brand-white);
+}
