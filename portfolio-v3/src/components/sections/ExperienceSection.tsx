@@ -52,6 +52,9 @@ const experiences: Experience[] = [
     ],
     tech: ["React", "Fastify", "GitHub Actions", "HTC Vive"],
   },
+];
+
+const education: Experience[] = [
   {
     company: "NYU Abu Dhabi",
     role: "B.S. Computer Science",
@@ -64,105 +67,110 @@ const experiences: Experience[] = [
   },
 ];
 
+function EntryList({ entries }: { entries: Experience[] }) {
+  return (
+    <div className="lg:col-span-9 lg:col-start-5 space-y-16">
+      {entries.map((exp, i) => (
+        <motion.div
+          key={exp.company + exp.role}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+          className="group"
+        >
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-4">
+            <div>
+              <h3 className="font-display text-xl font-bold text-brand-white inline-flex items-center gap-2">
+                {exp.url ? (
+                  <a
+                    href={exp.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-brand-accent transition-colors inline-flex items-center gap-2"
+                  >
+                    {exp.company}
+                    <ArrowUpRight
+                      size={16}
+                      className="text-brand-white/20 group-hover:text-brand-accent transition-colors"
+                    />
+                  </a>
+                ) : (
+                  exp.company
+                )}
+              </h3>
+              <p className="text-brand-accent text-sm mt-1">{exp.role}</p>
+            </div>
+            <p className="text-sm text-brand-white/40 shrink-0">{exp.period}</p>
+          </div>
+
+          {/* Highlights */}
+          <ul className="space-y-3">
+            {exp.highlights.map((point, j) => (
+              <li
+                key={j}
+                className="text-brand-white/60 text-[15px] leading-relaxed pl-4 border-l border-brand-white/10"
+              >
+                {point}
+              </li>
+            ))}
+          </ul>
+
+          {/* Tech tags */}
+          {exp.tech.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-5">
+              {exp.tech.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full bg-brand-accent/10 px-3 py-1 text-xs text-brand-accent"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Divider (except last) */}
+          {i < entries.length - 1 && (
+            <div className="mt-16 border-b border-brand-white/5" />
+          )}
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
+function SectionLabel({ label, delay = 0 }: { label: string; delay?: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.5, delay }}
+      className="lg:col-span-3"
+    >
+      <p className="text-sm uppercase tracking-[0.3em] text-brand-accent sticky top-24">
+        {label}
+      </p>
+    </motion.div>
+  );
+}
+
 export default function ExperienceSection() {
   return (
     <section id="experience" className="py-32 sm:py-40">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12 space-y-24">
+        {/* Education */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          {/* Label */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-3"
-          >
-            <p className="text-sm uppercase tracking-[0.3em] text-brand-accent sticky top-24">
-              Experience
-            </p>
-          </motion.div>
+          <SectionLabel label="Education" />
+          <EntryList entries={education} />
+        </div>
 
-          {/* Timeline */}
-          <div className="lg:col-span-9 lg:col-start-5 space-y-16">
-            {experiences.map((exp, i) => (
-              <motion.div
-                key={exp.company + exp.role}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group"
-              >
-                {/* Education section label */}
-                {exp.type === "education" && (
-                  <p className="text-xs uppercase tracking-[0.25em] text-brand-white/30 mb-6">
-                    Education
-                  </p>
-                )}
-
-                {/* Header */}
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-4">
-                  <div>
-                    <h3 className="font-display text-xl font-bold text-brand-white inline-flex items-center gap-2">
-                      {exp.url ? (
-                        <a
-                          href={exp.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-brand-accent transition-colors inline-flex items-center gap-2"
-                        >
-                          {exp.company}
-                          <ArrowUpRight
-                            size={16}
-                            className="text-brand-white/20 group-hover:text-brand-accent transition-colors"
-                          />
-                        </a>
-                      ) : (
-                        exp.company
-                      )}
-                    </h3>
-                    <p className="text-brand-accent text-sm mt-1">
-                      {exp.role}
-                    </p>
-                  </div>
-                  <p className="text-sm text-brand-white/40 shrink-0">
-                    {exp.period}
-                  </p>
-                </div>
-
-                {/* Highlights */}
-                <ul className="space-y-3">
-                  {exp.highlights.map((point, j) => (
-                    <li
-                      key={j}
-                      className="text-brand-white/60 text-[15px] leading-relaxed pl-4 border-l border-brand-white/10"
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Tech tags */}
-                {exp.tech.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mt-5">
-                    {exp.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-full bg-brand-accent/10 px-3 py-1 text-xs text-brand-accent"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {/* Divider (except last) */}
-                {i < experiences.length - 1 && (
-                  <div className="mt-16 border-b border-brand-white/5" />
-                )}
-              </motion.div>
-            ))}
-          </div>
+        {/* Experience */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+          <SectionLabel label="Experience" delay={0.1} />
+          <EntryList entries={experiences} />
         </div>
       </div>
     </section>
