@@ -42,8 +42,7 @@ export default function Navbar() {
             <li>
               <a
                 href="/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Aayush_Deo_CV.pdf"
                 className="rounded-full border border-brand-accent px-5 py-2 text-sm text-brand-accent transition-colors hover:bg-brand-accent hover:text-brand-white"
               >
                 Resume
@@ -87,8 +86,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="/cv.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download="Aayush_Deo_CV.pdf"
                   onClick={() => setIsOpen(false)}
                   className="block rounded-lg px-4 py-3 text-brand-accent transition-colors hover:bg-brand-surface"
                 >
