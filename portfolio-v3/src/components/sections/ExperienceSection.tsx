@@ -10,6 +10,7 @@ interface Experience {
   period: string;
   highlights: string[];
   tech: string[];
+  type?: "experience" | "education";
 }
 
 const experiences: Experience[] = [
@@ -59,6 +60,7 @@ const experiences: Experience[] = [
       "Computer Science major with Interactive Media minor",
     ],
     tech: [],
+    type: "education",
   },
 ];
 
@@ -91,6 +93,13 @@ export default function ExperienceSection() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group"
               >
+                {/* Education section label */}
+                {exp.type === "education" && (
+                  <p className="text-xs uppercase tracking-[0.25em] text-brand-white/30 mb-6">
+                    Education
+                  </p>
+                )}
+
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-4">
                   <div>
